@@ -1,5 +1,5 @@
 # Set the working directory
-setwd("C:/Users/Brian/OneDrive/DataScience/GettingAndCleaningData/Project")
+#setwd("C:/Users/Brian/OneDrive/DataScience/GettingAndCleaningData/Project")
 
 ## You should create one R script called run_analysis.R that does the following. 
 
