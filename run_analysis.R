@@ -82,10 +82,12 @@ mergedData <- merge(Data,ActLabels,
 ## ----------------------------------------------------------------
 library(dplyr)
 mergedData <- dplyr::rename(mergedData, ActivityID = `TotalData$ActivityLabel`)
-
+mergedData <- dplyr::rename(mergedData, Subject = `TotalData$Subject`)
 
 ## ----------------------------------------------------------------
 ## 5. From the data set in step 4, creates a second, independent 
 ## tidy data set with the average of each variable for each 
 ## activity and each subject.
 ## ----------------------------------------------------------------
+tidyData <- mergedData %>% group_by(ActivityText, Subject) %>% summarise_each(funs(mean))
+
